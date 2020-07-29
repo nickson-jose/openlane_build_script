@@ -8,7 +8,7 @@ This script builds openlane and all its dependencies on a Ubuntu (only) System.
 3. ./openlane_script.sh
 4. This script would create following directory structure:
   
- └── work
+  └── work
     └── tools
         ├── cmake-3.13.0 
         ├── magic-8.3.25 
