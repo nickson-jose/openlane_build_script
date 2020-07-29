@@ -12,18 +12,8 @@ This script builds openlane and all its dependencies on a Ubuntu (only) System.
         ├── cmake-3.13.0 
         ├── magic-8.3.25 
         └── openlane_working_dir
-            ├── openlane 
-            └── pdks
-                ├── open_pdks
-                │   ├── common
-                │   │   └── orig
-                │   └── sky130 
-                ├── sky130A
-                │   ├── libs.ref 
-                │   └── libs.tech
-                └── skywater-pdk 
+            
                 
-
         STEPS TO RUN OPENLANE
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/openlane)
