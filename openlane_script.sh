@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Kindly enter your username (non-root): "
+read user_name
+echo "Kindly enter the group-name the user is attached to.Execute 'grep $user_name /etc/passwd' to know the group name(without the quotes): "
+read group_name
+echo "Hi $user_name! Commencing OpenLane build on your system. It should take around 45-60 mins."
+
 echo "=================================="
 echo "-----INSTALLING DEPENDENCIES-----"
 echo "=================================="
@@ -108,7 +114,7 @@ cd openlane/docker_build
 make merge
 
 cd $ORIGIN_LOC
-chown -R nickson:nickson work
+chown -R $user_name:$group_name work
 echo "######CONGRATULATIONS YOU ARE DONE!!########"
 exit
 exit
