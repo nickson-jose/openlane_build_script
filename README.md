@@ -1,7 +1,7 @@
 # openlane_build_script
 This script builds openlane and all its dependencies on an Ubuntu (only) System.
 
-            STEPS TO BUILD
+            >--STEPS TO BUILD--<
 
 1. git clone https://github.com/njose939/openlane_build_script
 2. sudo -i #switch to root user (compulsory)
@@ -15,7 +15,7 @@ This script builds openlane and all its dependencies on an Ubuntu (only) System.
         └── openlane_working_dir
             
 ```              
-        STEPS TO RUN OPENLANE
+        >--STEPS TO RUN OPENLANE--<
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/openlane)
 2. export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>
