@@ -7,14 +7,14 @@ This script builds openlane and all its dependencies on an Ubuntu (only) System.
 2. sudo -i #switch to root user (compulsory)
 3. ./openlane_script.sh
 4. This script would create following directory structure:
-  
+```bash  
   └── work
     └── tools
         ├── cmake-3.13.0 
         ├── magic-8.3.25 
         └── openlane_working_dir
             
-              
+```              
         STEPS TO RUN OPENLANE
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/openlane)
