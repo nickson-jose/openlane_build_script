@@ -26,6 +26,8 @@ sudo apt install software-properties-common
 echo "\r" | sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt -y install python3.8
 sudo apt-get -y install python3-distutils
+sudo apt install python3-tk
+sudo apt install ngspice
 wget "https://github.com/Kitware/CMake/releases/download/v3.13.0/cmake-3.13.0.tar.gz"
 tar -xvzf cmake-3.13.0.tar.gz
 cd cmake-3.13.0/
