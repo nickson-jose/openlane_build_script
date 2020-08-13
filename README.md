@@ -3,7 +3,7 @@ This script builds openlane and all its dependencies on an Ubuntu (only) System.
 
             >--STEPS TO BUILD--<
 
-1. git clone https://github.com/njose939/openlane_build_script
+1. git clone https://github.com/nickson-jose/openlane_build_script
 2. `sudo -i` #switch to root user (compulsory)
 3. `./openlane_script.sh`
 4. This script would create following directory structure:
