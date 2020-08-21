@@ -46,9 +46,9 @@ sudo apt-get install m4 --assume-yes
 sudo apt-get install libx11-dev --assume-yes
 sudo apt-get install tcsh --assume-yes
 sudo apt-get install tclsh --assume-yes
-sudo wget "http://opencircuitdesign.com/magic/archive/magic-8.3.25.tgz"
-tar -xvzf magic-8.3.25.tgz
-cd magic-8.3.25
+sudo wget "http://opencircuitdesign.com/magic/archive/magic-8.3.50.tgz"
+tar -xvzf magic-8.3.50.tgz
+cd magic-8.3.50
 sudo ./configure
 sudo make
 sudo make install
