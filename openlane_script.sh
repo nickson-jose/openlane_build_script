@@ -90,6 +90,15 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 echo "=================================="
+echo "-----INSTALLING SPEF EXTRACTOR-----"
+echo "=================================="
+pip install numpy
+pip install sympy
+pip install matplotlib   
+pip install python3-matplotlib
+git clone https://github.com/Cloud-V/SPEF_EXTRACTOR/ 
+
+echo "=================================="
 echo "-----BUILDING OPENLANE-----"
 echo "=================================="
 
