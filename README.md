@@ -6,7 +6,11 @@ There are two scripts in this repo namely:
  
 **openlane_script.sh** is a standalone build where it builds openlane and all its dependencies. While **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow); where it builds only openlane (hence lesser time).
 
-            >--STEPS TO BUILD--<
+# Contents
+- [STEPS TO BUILD OPENLANE.](#steps-to-build-openlane)
+- [STEPS TO RUN OPENLANE.](#steps-to-run-openlane)
+ 
+# STEPS TO BUILD OPENLANE
 
 1. `git clone https://github.com/nickson-jose/openlane_build_script`
 2. `sudo -i` #switch to root user (compulsory).
@@ -51,7 +55,8 @@ vsdflow/
         └── SPEF EXTRACTOR
             
 ```              
-        >--STEPS TO RUN OPENLANE--<
+ 
+# STEPS TO RUN OPENLANE
 
 1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/openlane)
 2. `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
