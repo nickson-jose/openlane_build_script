@@ -1,14 +1,17 @@
 #!/bin/bash
 
-echo -e "\e[1mEnter your username \e[7m(non-root)\e[27m: "
+echo -e "\e[1mEnter your username \e[7m(non-root)\e[27m: \e[21m"
 read user_name
-echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes): "
+echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes): \e[21m"
 read group_name
-read -p " Hi $user_name, \e[1mhave you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? \e[21m[y/n]: " my_resp
+echo
+read -p " Hi $user_name, \e[1mHave you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? \e[21m[y/n]: " my_resp
+echo
 if [ "${my_resp,,}" != "y" ]
     then 
         echo
         echo "Copy openlane_script_wo_depends.sh to ~/vsdflow/ & execute it from there. Exiting now.."
+        echo
         exit
 else
 echo "Hi $user_name! Commencing OpenLane build on your system. It should take around 30-45 mins."
@@ -51,9 +54,11 @@ sudo apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 apt-cache madison docker-ce
 echo "Select the required version string from above listed docker repo.The version string is the string in second column of above list"
-echo "for example, 5:19.03.12~3-0~ubuntu-bionic"
+echo
+echo "\e[1mFor example, 5:19.03.12~3-0~ubuntu-bionic\e[21m"
+echo
 echo -e "\e[7mEnter the required version string\e[27m: "
-read -p ver_str
+read ver_str
 sudo apt-get install docker-ce=$ver_str docker-ce-cli=$ver_str containerd.io
 sudo usermod -aG docker $user_name
 sudo systemctl stop docker
