@@ -1,12 +1,13 @@
 #!/bin/bash
 
-echo "Kindly enter your username (non-root): "
+echo -e "\e[1mEnter your username \e[7m(non-root): "
 read user_name
-echo "Kindly enter the group-name the user is attached to.Execute 'grep $user_name /etc/passwd' to know the group name(without the quotes): "
+echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[21mto know the group name(without the quotes): "
 read group_name
-read -p " Hi $user_name, have you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? [y/n]: " my_resp
+read -p " Hi $user_name, \e[1mhave you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? [y/n]: " my_resp
 if [ "${my_resp,,}" != "y" ]
     then 
+        echo
         echo "Copy openlane_script_wo_depends.sh to ~/vsdflow/ & execute it from there. Exiting now.."
         exit
 else
@@ -49,9 +50,10 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 apt-cache madison docker-ce
-echo "Please select the required version string from above listed docker repo.The version string is the string in second column of above list"
+echo "Select the required version string from above listed docker repo.The version string is the string in second column of above list"
 echo "for example, 5:19.03.12~3-0~ubuntu-bionic"
-read -p "Enter the required version string: " ver_str
+echo -e "\e[1mEnter the required version string: "
+read -p ver_str
 sudo apt-get install docker-ce=$ver_str docker-ce-cli=$ver_str containerd.io
 sudo usermod -aG docker $user_name
 sudo systemctl stop docker
