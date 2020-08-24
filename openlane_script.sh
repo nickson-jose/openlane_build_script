@@ -83,8 +83,13 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
-sudo apt-get install docker-ce=5:19.03.12~3-0~ubuntu-bionic docker-ce-cli=5:19.03.12~3-0~ubuntu-bionic containerd.io
-sudo usermod -aG docker $USER
+apt-cache madison docker-ce
+echo "Please select the required version string from above listed docker repo.The version string is the string in second column of above list"
+echo "for example, 5:19.03.12~3-0~ubuntu-bionic"
+echo "Enter the required version string: "
+read ver_str
+sudo apt-get install docker-ce=$ver_str docker-ce-cli=$ver_str containerd.io
+sudo usermod -aG docker $user_name
 sudo systemctl stop docker
 sudo systemctl start docker
 sudo systemctl enable docker
