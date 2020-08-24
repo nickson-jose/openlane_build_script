@@ -97,6 +97,9 @@ sudo systemctl enable docker
 echo "=================================="
 echo "-----BUILDING SPEF EXTRACTOR-----"
 echo "=================================="
+
+sudo apt install -y python3-pip
+sudo apt install -y python-pip
 pip install numpy
 pip install sympy
 pip install matplotlib   
