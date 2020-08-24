@@ -19,7 +19,8 @@ There are two scripts in this repo namely:
       - 
 4. This script would create following directory structure:
 - **For build in conjunction with vsdflow**
-`vsdflow/
+```bash 
+vsdflow/
   └── work
      └── tools
       ├── cmake-3.13.0
@@ -38,7 +39,7 @@ There are two scripts in this repo namely:
       ├── qrouter-1.4.59.tgz
       └── SPEF_EXTRACTOR
 
-`
+```
 - **For standalone build**
  ```bash  
   └── work
