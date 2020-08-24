@@ -2,7 +2,7 @@
 
 echo -e "Enter your username \e[7m(non-root)\e[27m: "
 read user_name
-echo -e "Enter the group-name the user is attached to.Execute \e[7mgrep $user_name /etc/passwd \e[27mto know the group name(without the quotes): "
+echo -e "Enter the group-name the user is attached to.Execute \e[7mgrep $user_name /etc/group \e[27mto know the group name(without the quotes): "
 read group_name
 echo
 read -p " Hi $user_name, Have you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? [y/n]: " my_resp
