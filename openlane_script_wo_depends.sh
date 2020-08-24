@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "\e[1mEnter your username \e[7m(non-root)\e[27m: \e[21m"
+echo -e "\e[1mEnter your username \e[7m(non-root)\e[27m \e[21m: "
 read user_name
-echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes): \e[21m"
+echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes)\e[21m: "
 read group_name
 echo
 read -p " Hi $user_name, \e[1mHave you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? \e[21m[y/n]: " my_resp
