@@ -74,7 +74,7 @@ sudo apt install -y python-pip
 pip install numpy
 pip install sympy
 pip install matplotlib   
-pip install python3-matplotlib
+sudo apt-get install python3-matplotlib
 git clone https://github.com/Cloud-V/SPEF_EXTRACTOR/ 
 
 echo "=================================="
