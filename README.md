@@ -4,11 +4,11 @@ There are two scripts in this repo namely:
  - openlane_script.sh
  - openlane_script_wo_depends.sh
  
-**openlane_script.sh** is a standalone build where it builds openlane and all its dependencies. While **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow); where it builds only openlane (hence lesser time).
+**openlane_script.sh** is a standalone script where it builds openlane and all its dependencies. While **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow); where it builds only openlane (hence lesser time).
 
 # Contents
-- [STEPS TO BUILD OPENLANE.](#steps-to-build-openlane)
-- [STEPS TO RUN OPENLANE.](#steps-to-run-openlane)
+- [Steps to build Openlane](#steps-to-build-openlane)
+- [Steps to run Openlane](#steps-to-run-openlane)
  
 # STEPS TO BUILD OPENLANE
 
