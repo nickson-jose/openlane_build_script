@@ -1,13 +1,46 @@
 # openlane_build_script
 This script builds openlane and all its dependencies on an Ubuntu (only) System.
+There are two scripts in this repo namely:
+ - openlane_script.sh
+ - openlane_script_wo_depends.sh
+ 
+**openlane_script.sh** is a standalone build where it builds openlane and all its dependencies. While **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow); where it builds only openlane (hence lesser time).
 
             >--STEPS TO BUILD--<
 
 1. `git clone https://github.com/nickson-jose/openlane_build_script`
-2. `sudo -i` #switch to root user (compulsory)
-3. `./openlane_script.sh`
+2. `sudo -i` #switch to root user (compulsory).
+3. Change directory to where openlane_build_script folder was cloned. `cd /path/to/openlane_build_script`
+4. Execute the script as below:
+      - **For build in conjunction with vsdflow**
+            - Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
+            -`chmod 775  openlane_script_wo_depends.sh`
+      - **For standalone build**`./openlane_script.sh`
+      - 
 4. This script would create following directory structure:
-```bash  
+- **For build in conjunction with vsdflow**
+`vsdflow/
+  └── work
+     └── tools
+      ├── cmake-3.13.0
+      ├── cmake-3.13.0.tar.gz
+      ├── graywolf
+      ├── magic-8.2.172
+      ├── magic-8.2.172.tgz
+      ├── netgen-1.5.134
+      ├── netgen-1.5.134.tgz
+      ├── openlane_working_dir
+      ├── OpenSTA
+      ├── OpenTimer
+      ├── qflow-1.3.17
+      ├── qflow-1.3.17.tgz
+      ├── qrouter-1.4.59
+      ├── qrouter-1.4.59.tgz
+      └── SPEF_EXTRACTOR
+
+`
+- **For standalone build**
+ ```bash  
   └── work
     └── tools
         ├── cmake-3.13.0 
