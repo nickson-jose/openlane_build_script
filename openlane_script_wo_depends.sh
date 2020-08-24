@@ -25,7 +25,7 @@ echo "\r" | sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt -y install python3.8
 sudo apt-get -y install python3-distutils
-sudo apt install python3-tk
+sudo apt -y install python3-tk
 sudo apt install ngspice
 
 echo "=================================="
@@ -51,8 +51,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 apt-cache madison docker-ce
 echo "Please select the required version string from above listed docker repo.The version string is the string in second column of above list"
 echo "for example, 5:19.03.12~3-0~ubuntu-bionic"
-echo "Enter the required version string: "
-read ver_str
+read -p "Enter the required version string: " ver_str
 sudo apt-get install docker-ce=$ver_str docker-ce-cli=$ver_str containerd.io
 sudo usermod -aG docker $user_name
 sudo systemctl stop docker
@@ -62,6 +61,7 @@ sudo systemctl enable docker
 echo "=================================="
 echo "-----BUILDING SPEF EXTRACTOR-----"
 echo "=================================="
+sudo apt install -y python3-pip
 pip install numpy
 pip install sympy
 pip install matplotlib   
