@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo -e "\e[1mEnter your username \e[7m(non-root)\e[27m \e[21m: "
+echo -e "Enter your username \e[7m(non-root)\e[27m: "
 read user_name
-echo -e "\e[1mEnter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes)\e[21m: "
+echo -e "Enter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes): "
 read group_name
 echo
 read -p " Hi $user_name, \e[1mHave you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? \e[21m[y/n]: " my_resp
@@ -55,7 +55,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 apt-cache madison docker-ce
 echo "Select the required version string from above listed docker repo.The version string is the string in second column of above list"
 echo
-echo "\e[1mFor example, 5:19.03.12~3-0~ubuntu-bionic\e[21m"
+echo "\e[1mFor example\e[21m, 5:19.03.12~3-0~ubuntu-bionic"
 echo
 echo -e "\e[7mEnter the required version string\e[27m: "
 read ver_str
