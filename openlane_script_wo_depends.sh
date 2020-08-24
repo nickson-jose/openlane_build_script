@@ -2,7 +2,7 @@
 
 echo -e "Enter your username \e[7m(non-root)\e[27m: "
 read user_name
-echo -e "Enter the group-name the user is attached to.Execute \e[7m'grep $user_name /etc/passwd' \e[27mto know the group name(without the quotes): "
+echo -e "Enter the group-name the user is attached to.Execute \e[7mgrep $user_name /etc/passwd \e[27mto know the group name(without the quotes): "
 read group_name
 echo
 read -p " Hi $user_name, Have you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? [y/n]: " my_resp
@@ -56,7 +56,7 @@ apt-cache madison docker-ce
 echo
 echo "Select the required version string from above listed docker repo.The version string is the string in second column of above list"
 echo
-echo "\e[1mFor example,\e[21m5:19.03.12~3-0~ubuntu-bionic"
+echo "For example,5:19.03.12~3-0~ubuntu-bionic"
 echo
 echo -e "\e[7mEnter the required version string\e[27m: "
 read ver_str
