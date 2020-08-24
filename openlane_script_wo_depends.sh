@@ -4,6 +4,12 @@ echo "Kindly enter your username (non-root): "
 read user_name
 echo "Kindly enter the group-name the user is attached to.Execute 'grep $user_name /etc/passwd' to know the group name(without the quotes): "
 read group_name
+read -p " Hi $user_name, have you copied openlane_script_wo_depends.sh to ~/vsdflow/ and currently in vsdflow directory? [y/n]: " my_resp
+if [ "${my_resp,,}" != "y" ]
+    then 
+        echo "Copy openlane_script_wo_depends.sh to ~/vsdflow/ & execute it from there. Exiting now.."
+        exit
+else
 echo "Hi $user_name! Commencing OpenLane build on your system. It should take around 30-45 mins."
 
 echo "=================================="
@@ -90,5 +96,7 @@ make merge
 cd $ORIGIN_LOC
 chown -R $user_name:$group_name work
 echo "######CONGRATULATIONS YOU ARE DONE!!########"
+
+fi
 exit
 exit
