@@ -13,10 +13,10 @@ There are two scripts in this repo namely:
 3. Change directory to where openlane_build_script folder was cloned. `cd /path/to/openlane_build_script`
 4. Execute the script as below:
       - **For build in conjunction with vsdflow**
-            - Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
-            -`chmod 775  openlane_script_wo_depends.sh`
-      - **For standalone build**`./openlane_script.sh`
-      - 
+            -- Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
+            --`chmod 775  openlane_script_wo_depends.sh`
+      - **For standalone build**`
+            -- ./openlane_script.sh` 
 4. This script would create following directory structure:
 - **For build in conjunction with vsdflow**
 ```bash 
@@ -42,6 +42,7 @@ vsdflow/
 ```
 - **For standalone build**
  ```bash  
+ Desktop/
   └── work
     └── tools
         ├── cmake-3.13.0 
