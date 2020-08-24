@@ -32,8 +32,8 @@ vsdflow/
       ├── cmake-3.13.0
       ├── cmake-3.13.0.tar.gz
       ├── graywolf
-      ├── magic-8.2.172
-      ├── magic-8.2.172.tgz
+      ├── magic-8.3.50
+      ├── magic-8.3.50.tgz
       ├── netgen-1.5.134
       ├── netgen-1.5.134.tgz
       ├── openlane_working_dir
