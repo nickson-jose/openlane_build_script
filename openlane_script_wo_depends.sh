@@ -13,7 +13,6 @@ echo "=================================="
 ORIGIN_LOC=$(pwd)
 sudo apt-get update
 sudo apt-get -y upgrade
-mkdir -p work/tools
 cd work/tools
 sudo apt install software-properties-common
 echo "\r" | sudo add-apt-repository ppa:deadsnakes/ppa
@@ -83,8 +82,7 @@ git clone https://github.com/efabless/open_pdks -b rc2
 cd open_pdks
 make
 make install-local
-cd ..
-cd ..
+cd ../../
 git clone https://github.com/efabless/openlane --branch rc2
 cd openlane/docker_build
 make merge
