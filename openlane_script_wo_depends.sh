@@ -15,11 +15,11 @@ if [ "${my_resp,,}" != "y" ]
         exit
 else
 echo "Hi $user_name! Commencing OpenLane build on your system. It should take around 30-45 mins."
-
+echo
 echo "=================================="
 echo "-----INITIALIZATION-----"
 echo "=================================="
-
+echo
 ORIGIN_LOC=$(pwd)
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -31,11 +31,11 @@ sudo apt -y install python3.8
 sudo apt-get -y install python3-distutils
 sudo apt -y install python3-tk
 sudo apt install ngspice
-
+echo
 echo "=================================="
 echo "-----INSTALLING DOCKER-----"
 echo "=================================="
-
+echo
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
 sudo apt-get -y install \
@@ -65,22 +65,23 @@ sudo usermod -aG docker $user_name
 sudo systemctl stop docker
 sudo systemctl start docker
 sudo systemctl enable docker
-
+echo
 echo "=================================="
 echo "-----BUILDING SPEF EXTRACTOR-----"
 echo "=================================="
+echo
 sudo apt install -y python3-pip
 sudo apt install -y python-pip
 pip install numpy
 pip install sympy
 pip install matplotlib   
-sudo apt-get install python3-matplotlib
+sudo apt-get install -y python3-matplotlib
 git clone https://github.com/Cloud-V/SPEF_EXTRACTOR/ 
-
+echo
 echo "=================================="
 echo "----BUILDING OPENLANE----"
 echo "=================================="
-
+echo
 mkdir openlane_working_dir
 cd openlane_working_dir
 mkdir pdks
@@ -104,8 +105,9 @@ make merge
 
 cd $ORIGIN_LOC
 chown -R $user_name:$group_name work
+echo
 echo "######CONGRATULATIONS YOU ARE DONE!!########"
-
+echo
 fi
 exit
 exit
