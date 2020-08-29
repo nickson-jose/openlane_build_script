@@ -78,4 +78,4 @@ vsdflow/
 
 # ACKNOWLEDGMENTS
 
-[efabless openlane team](#https://github.com/efabless/openlane)
+[efabless openlane team](https://github.com/efabless/openlane)
