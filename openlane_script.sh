@@ -13,7 +13,6 @@ echo
 ORIGIN_LOC=$(pwd)
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get -y install git
 mkdir -p work/tools
 cd work/tools
 
@@ -89,7 +88,7 @@ echo "for example, 5:19.03.12~3-0~ubuntu-bionic"
 echo "Enter the required version string: "
 read ver_str
 sudo apt-get install docker-ce=$ver_str docker-ce-cli=$ver_str containerd.io
-sudo usermod -aG docker $user_name
+sudo usermod -a -G docker $user_name
 sudo systemctl stop docker
 sudo systemctl start docker
 sudo systemctl enable docker
@@ -102,7 +101,7 @@ mkdir openlane_working_dir
 cd openlane_working_dir
 mkdir pdks
 mkdir openlane
-export PDK_ROOT=$ORIGIN_LOC/work/tools/openlane_working_dir/pdks
+export PDK_ROOT=$ORIGIN_LOC/work/tools/openlane_working_dir/pdks/
 cd $PDK_ROOT
 git clone https://github.com/google/skywater-pdk.git
 cd skywater-pdk
