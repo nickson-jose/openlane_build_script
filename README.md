@@ -53,6 +53,7 @@ vsdflow/
 - **For standalone build**
  ```bash  
  Desktop/
+ ...
   └── work
     └── tools
         ├── cmake-3.13.0 
