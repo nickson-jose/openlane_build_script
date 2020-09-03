@@ -58,7 +58,6 @@ vsdflow/
         ├── cmake-3.13.0 
         ├── magic-8.3.50 
         └── openlane_working_dir
-        └── SPEF EXTRACTOR
             
 ```              
  
