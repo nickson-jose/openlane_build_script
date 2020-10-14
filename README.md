@@ -27,7 +27,7 @@ There scripts in this repo are namely:
       
       - **For standalone build**
        
-        - `./openlane_script.sh` 
+        - `./openlane_script.sh` **OR** `./openlane_script_rc3.sh`
 4. This script would create following directory structure:
 
 - **For build in conjunction with vsdflow**
@@ -71,7 +71,7 @@ vsdflow/
    
    - For eg.: `export PDK_ROOT= /home/<username>/Desktop/work/tools/openlane_working_dir/pdks/`
 
-3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc2`
+3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc3` (or rc2)
    - **Note:-** If you face "permission denied" after executing the above command, just restart the machine once. Else logout/login of the user to see the changes reflect immediately.
 
 4. `./flow.tcl -design spm`
