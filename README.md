@@ -60,7 +60,7 @@ vsdflow/
   └── work
     └── tools
         ├── cmake-3.13.0 
-        ├── magic-8.3.50 
+        ├── magic-8.3.60 
         └── openlane_working_dir
             
 ```              
