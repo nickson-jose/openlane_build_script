@@ -116,7 +116,7 @@ git checkout 48db3e1a428ae16f5d4c86e0b7679656cf8afe3d
 	cd sky130
 	make
 	make install-local
-cd ../../
+cd ../../../
 git clone https://github.com/efabless/openlane --branch rc3
 cd openlane/docker_build
 make merge
