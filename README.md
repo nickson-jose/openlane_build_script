@@ -4,7 +4,7 @@ There scripts in this repo are namely:
  - openlane_script.sh
  - openlane_script_wo_depends.sh
  
-**openlane_script.sh** is a standalone script where it builds openlane (rc2 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow)and builds only openlane (hence lesser run-time).
+**openlane_script.sh** is a standalone script where it builds openlane (rc2 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow) and builds only openlane (hence lesser run-time).
 ### Update:
 **openlane_script_rc3.sh** includes the latest update to openlane. Similar to openlane_script.sh, it's also a standalone script.
 
