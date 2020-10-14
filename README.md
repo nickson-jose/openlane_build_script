@@ -1,6 +1,6 @@
 # openlane_build_script
 This script builds openlane and all its dependencies on an Ubuntu (only) System.
-There scripts in this repo are namely:
+The scripts in this repo are namely:
  - openlane_script.sh
  - openlane_script_wo_depends.sh
  
