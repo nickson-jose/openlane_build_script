@@ -51,7 +51,7 @@ cd magic-8.3.50
 sudo ./configure
 sudo make
 sudo make install
-cd ..
+cd ../
 
 sudo apt-get install autoconf --assume-yes
 sudo apt-get install automake --assume-yes
