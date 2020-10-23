@@ -1,12 +1,11 @@
 # openlane_build_script
 This script builds openlane and all its dependencies on an Ubuntu (only) System.
 The scripts in this repo are namely:
- - openlane_script.sh
+ - openlane_script_rc3.sh
  - openlane_script_wo_depends.sh
  
-**openlane_script.sh** is a standalone script where it builds openlane (rc2 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow) and builds only openlane (hence lesser run-time).
-### Update:
-**openlane_script_rc3.sh** includes the latest update to openlane. Similar to openlane_script.sh, it's also a standalone script.
+**openlane_script_rc3.sh** is a standalone script where it builds openlane (latest rc3 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow) and builds only openlane (hence lesser run-time).
+
 
 # Contents
 - [Steps to build Openlane](#steps-to-build-openlane)
@@ -22,11 +21,11 @@ The scripts in this repo are namely:
 
       - **For standalone build**
        
-        - `./openlane_script.sh` **OR** `./openlane_script_rc3.sh`
+        - `./openlane_script_rc3.sh`
      
       - **For build in conjunction with vsdflow**
        
-        - Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
+        -  Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
         - `chmod 775  openlane_script_wo_depends.sh`
       
 5. This script would create following directory structure:
@@ -72,7 +71,7 @@ vsdflow/
    
    - For eg.: `export PDK_ROOT=/home/<username>/Desktop/work/tools/openlane_working_dir/pdks/`
 
-3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc3` (or rc2)
+3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc3`
    - **Note:-** If you face "permission denied" after executing the above command, just restart the machine once. Else logout/login of the user to see the changes reflect immediately.
 
 4. `./flow.tcl -design spm`
