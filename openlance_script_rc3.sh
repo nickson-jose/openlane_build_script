@@ -33,7 +33,7 @@ cd cmake-3.13.0/
 sudo ./bootstrap --prefix=/usr/local
 sudo make -j$(nproc)
 sudo make install 
-cd ..
+cd ../
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main" -y 
 sudo apt-get update 
