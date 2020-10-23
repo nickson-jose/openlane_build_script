@@ -70,8 +70,7 @@ vsdflow/
 2. `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
    
    - For eg.: `export PDK_ROOT=/home/<username>/Desktop/work/tools/openlane_working_dir/pdks/`
-   - **Note:**
-     To permanently set the variable PDK_ROOT, add a line to `/etc/environment PDK_ROOT="/home/nickson/Desktop/openlane_build_script/work/tools/openlane_working_dir/pdks/"`
+   - To permanently set the variable, add a line to '/etc/environment' setting the PDK_ROOT. For example:`PDK_ROOT="~/Desktop/openlane_build_script/work/tools/openlane_working_dir/pdks/"`
 3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc3`
    - **Note:** If you face "permission denied" after executing the above command, just restart the machine once. Else logout/login of the user to see the changes reflect immediately.
 
