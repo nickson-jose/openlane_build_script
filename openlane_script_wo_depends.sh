@@ -76,7 +76,7 @@ pip install numpy
 pip install sympy
 pip install matplotlib   
 sudo apt-get install -y python3-matplotlib
-git clone https://github.com/Cloud-V/SPEF_EXTRACTOR/ 
+git clone https://github.com/HanyMoussa/SPEF_EXTRACTOR.git
 echo
 echo "=================================="
 echo "----BUILDING OPENLANE----"
