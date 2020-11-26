@@ -81,7 +81,7 @@ wget "https://sourceforge.net/projects/ngspice/files/ng-spice-rework/33/ngspice-
 tar -zxvf ngspice-33.tar.gz
 cd ngspice-33
 sudo yum install libtool libX11 libX11-devel libXaw libXaw-devel readline readline-devel
-sudo sed 's/CFLAGS="/CFLAGS="-std=c99 /g' compile_linux.sh > compile_linux.sh
+sudo sed -i 's/CFLAGS="/CFLAGS="-std=c99 /g' compile_linux.sh
 sudo chmod 775 compile_linux.sh
 sudo ./compile_linux.sh
 
