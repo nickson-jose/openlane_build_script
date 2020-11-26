@@ -21,6 +21,7 @@ The scripts in this repo are namely:
 
       - **For standalone build**
        
+        - `chmod 775 openlane_script_rc3.sh`
         - `./openlane_script_rc3.sh`
      
       - **For build in conjunction with vsdflow**
