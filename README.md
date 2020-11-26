@@ -28,6 +28,7 @@ The scripts in this repo are namely:
        
         -  Copy the `openlane_script_wo_depends.sh` to vsdflow folder.
         - `chmod 775  openlane_script_wo_depends.sh`
+        - `./openlane_script_wo_depends.sh`
       
 5. This script would create following directory structure:
 
