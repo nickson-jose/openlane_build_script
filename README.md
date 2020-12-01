@@ -51,7 +51,6 @@ vsdflow/
       ├── qflow-1.3.17.tgz
       ├── qrouter-1.4.59
       ├── qrouter-1.4.59.tgz
-      └── SPEF_EXTRACTOR
 
 ```
 - **For standalone build**
