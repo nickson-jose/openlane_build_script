@@ -74,27 +74,11 @@ echo
 mkdir openlane_working_dir
 cd openlane_working_dir
 mkdir pdks
-mkdir openlane
 export PDK_ROOT=$ORIGIN_LOC/work/tools/openlane_working_dir/pdks
-cd $PDK_ROOT
-git clone https://github.com/google/skywater-pdk.git
-cd skywater-pdk
-git checkout 5cd70ed19fee8ea37c4e8dbd5c5c3eaa9886dd23
-git submodule update --init libraries/sky130_fd_sc_hd/latest
-make sky130_fd_sc_hd 
-cd $PDK_ROOT
-git clone https://github.com/RTimothyEdwards/open_pdks.git
-cd open_pdks
-git checkout 48db3e1a428ae16f5d4c86e0b7679656cf8afe3d
-./configure --with-sky130-source=$PDK_ROOT/skywater-pdk/libraries --with-sky130-local-path=$PDK_ROOT
-	cd sky130
-	make
-	make install-local
-cd ../../../
-git clone https://github.com/efabless/openlane --branch rc3
-cd openlane/docker_build
-make merge
-
+git clone https://github.com/efabless/openlane.git --branch rc6
+cd openlane
+make openlane
+make pdk
 cd $ORIGIN_LOC
 chown -R $user_name:$group_name work
 echo
