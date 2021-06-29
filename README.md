@@ -1,10 +1,10 @@
 # openlane_build_script
 This script builds openlane and all its dependencies on an Ubuntu (only) System.
 The scripts in this repo are namely:
- - openlane_script_rc6.sh
+ - openlane_script.sh
  - openlane_script_wo_depends.sh
  
-**openlane_script_rc6.sh** is a standalone script where it builds openlane (latest rc6 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow) and builds only openlane (hence lesser run-time).
+**openlane_script.sh** is a standalone script where it builds openlane (latest rc6 version) and all its dependencies; while **openlane_script_wo_depends.sh** works in conjunction with [vsdflow script](https://github.com/kunalg123/vsdflow) and builds only openlane (hence lesser run-time).
 
 
 # Contents
@@ -21,8 +21,8 @@ The scripts in this repo are namely:
 
       - **For standalone build**
        
-        - `chmod 775 openlane_script_rc6.sh`
-        - `./openlane_script_rc6.sh`
+        - `chmod 775 openlane_script.sh`
+        - `./openlane_script.sh`
      
       - **For build in conjunction with vsdflow**
        
