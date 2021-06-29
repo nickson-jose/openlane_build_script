@@ -75,7 +75,7 @@ mkdir openlane_working_dir
 cd openlane_working_dir
 mkdir pdks
 export PDK_ROOT=$ORIGIN_LOC/work/tools/openlane_working_dir/pdks
-git clone https://github.com/efabless/openlane.git --branch rc6
+git clone https://github.com/efabless/openlane.git
 cd openlane
 make openlane
 make pdk
