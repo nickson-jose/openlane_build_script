@@ -58,30 +58,30 @@ vsdflow/
  Desktop/
  ...
   └── work
-    └── tools
-        ├── cmake-3.13.0 
-        ├── magic-8.3.60 
+    └── tools 
         └── openlane_working_dir
-            
+         |__ Openlane
+                       
 ```              
  
 # STEPS TO RUN OPENLANE
 
-1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/openlane)
+1. Go to /path/to/openlane (i.e., ~/work/tools/openlane_working_dir/Openlane)
+2. There are two ways of invoking openlane. The easiest of the two would be:
+   `make mount`
 
-2. `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
+3. The second way would be to explicitly specify the the path to PDK_ROOT and OPENLANE_IMAGE_NAME 
+   `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
+   `export OPENLANE_IMAGE_NAME=<docker image name>`
+   `docker run -it -v $(pwd):/openlane -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME`
    
-   - For eg.: `export PDK_ROOT=/home/<username>/Desktop/work/tools/openlane_working_dir/pdks/`
-   - To permanently set the variable, add a line to '/etc/environment' setting the PDK_ROOT as the absolute path to the pdks directory.For example:`PDK_ROOT="/home/<username>/Desktop/openlane_build_script/work/tools/openlane_working_dir/pdks/"`
-   - **Note:** The machine might have to be restarted once for the above changes to reflect.
+4. **Note:** If you face "permission denied" during docker invocation in setup or in step 3 above do refer below link to resolve:
+   [Fix Docker Permission Denied Issue](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)
 
-3. `docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:current`
-   - **Note:** If you face "permission denied" after executing the above command, just restart the machine once. Else logout/login of the user to see the changes reflect immediately.
-
-4. `./flow.tcl -design spm`
+5. `./flow.tcl -design spm`
 (the above flow.tcl command will run RTL2GDS flow for design named "spm". Same can be done for other designs which are present in ~/work/tools/openlane_working_dir/openlane/designs)
 
-5. Refer to: https://github.com/efabless/openlane for detailed instructions.
+6. Refer to: https://github.com/efabless/openlane for detailed instructions.
 
 # ACKNOWLEDGMENTS
 
