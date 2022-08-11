@@ -70,7 +70,7 @@ vsdflow/
 2. There are two ways of invoking openlane. The easiest of the two would be:
    - `make mount`
 
-   The second way would be to explicitly specify the the path to PDK_ROOT and OPENLANE_IMAGE_NAME 
+   The second way would be to explicitly specify the path to PDK_ROOT and OPENLANE_IMAGE_NAME and invoking docker with these inputs
    - `export PDK_ROOT=<absolute path to where skywater-pdk and open_pdks reside>`
    - `export OPENLANE_IMAGE_NAME=<docker image name>`
    - `docker run -it -v $(pwd):/openlane -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME`
