@@ -73,12 +73,10 @@ echo "=================================="
 echo
 mkdir openlane_working_dir
 cd openlane_working_dir
-mkdir pdks
-export PDK_ROOT=$ORIGIN_LOC/work/tools/openlane_working_dir/pdks
-git clone https://github.com/efabless/openlane.git
-cd openlane
-make openlane
-make pdk
+git clone https://github.com/The-OpenROAD-Project/OpenLane.git
+cd OpenLane/
+make
+make test
 cd $ORIGIN_LOC
 chown -R $user_name:$group_name work
 echo
