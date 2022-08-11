@@ -79,7 +79,7 @@ vsdflow/
    - [Fix Docker Permission Denied Issue](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)
 
 5. `./flow.tcl -design spm`
-(the above flow.tcl command will run RTL2GDS flow for design named "spm". Same can be done for other designs which are present in ~/work/tools/openlane_working_dir/openlane/designs)
+(the above flow.tcl command will run RTL2GDS flow for design named "spm". Same can be done for other designs which are present in ~/work/tools/openlane_working_dir/Openlane/designs)
 
 6. Refer to: https://github.com/efabless/openlane for detailed instructions.
 
