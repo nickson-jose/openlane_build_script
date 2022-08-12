@@ -75,7 +75,7 @@ vsdflow/
    - `export OPENLANE_IMAGE_NAME=<docker image name>`
    - `docker run -it -v $(pwd):/openlane -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) $OPENLANE_IMAGE_NAME`
    
-3. **Note:** If you face "permission denied" during docker invocation in setup or in step 3 above do refer below link to resolve:
+3. **Note:** If you face "permission denied" during docker invocation in setup or in above step, do refer below link to resolve:
    - [Fix Docker Permission Denied Issue](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue)
 
 4. `./flow.tcl -design spm`
